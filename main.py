@@ -3,7 +3,7 @@
 import logging
 import sys
 
-from CwrdCoder import CwrdCoder
+from MyCoder import MyCoder
 from ConfigException import ConfigException
 from MyConfigReader import MyConfigReader
 from MyFileReader import MyFileReader
@@ -11,9 +11,9 @@ from MyFileReader import MyFileReader
 
 class MainClass:
     def __init__(self):
-        self._config_reader: ConfigReader = None
-        self._file_reader: FileReader = None
-        self._coder: Coder = None
+        self._config_reader = MyConfigReader()
+        self._file_reader = MyFileReader()
+        self._coder = MyCoder()
 
     def run(self, config_file_name: str) -> str:
         result = ""
